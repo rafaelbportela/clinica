@@ -127,7 +127,7 @@ export default function Home() {
       />
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-white/45 bg-porcelain/82 backdrop-blur-2xl">
-        <div className="section-shell flex h-20 items-center justify-between gap-6">
+        <div className="section-shell flex h-16 items-center justify-between gap-4 sm:h-20 sm:gap-6">
           <a href="#home" className="flex items-center gap-3" aria-label="Clínica Abirachid">
             <Image
               src="/logo-clinica-abirachid.svg"
@@ -135,7 +135,7 @@ export default function Home() {
               width={151}
               height={44}
               priority
-              className="h-11 w-auto"
+              className="h-10 w-auto sm:h-11"
             />
           </a>
 
@@ -156,7 +156,7 @@ export default function Home() {
 
           <a
             href={whatsappUrl}
-            className="hidden min-h-11 items-center gap-2 rounded-full bg-ink px-5 text-sm font-bold text-white shadow-lift transition hover:-translate-y-0.5 hover:bg-moss sm:inline-flex"
+            className="inline-flex min-h-10 items-center gap-2 rounded-full bg-ink px-4 text-xs font-bold text-white shadow-lift transition hover:-translate-y-0.5 hover:bg-moss sm:min-h-11 sm:px-5 sm:text-sm"
           >
             <MessageCircle size={17} />
             Agendar avaliação
@@ -165,26 +165,26 @@ export default function Home() {
       </header>
 
       <main id="home">
-        <section className="relative overflow-hidden pb-20 pt-32 lg:pb-28 lg:pt-40">
-          <div className="section-shell grid items-center gap-12 lg:grid-cols-[1fr_0.88fr]">
+        <section className="relative overflow-hidden pb-14 pt-24 sm:pb-20 sm:pt-32 lg:pb-28 lg:pt-40">
+          <div className="section-shell grid items-center gap-8 sm:gap-12 lg:grid-cols-[1fr_0.88fr]">
             <motion.div
               initial="hidden"
               animate="visible"
               transition={{ duration: 0.75, ease: "easeOut" }}
               variants={fadeUp}
             >
-              <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-sage/25 bg-white/55 px-4 py-2 text-sm font-bold text-moss shadow-sm">
+              <span className="mb-4 inline-flex max-w-full items-center gap-2 rounded-full border border-sage/25 bg-white/65 px-3 py-2 text-xs font-bold text-moss shadow-sm sm:mb-5 sm:px-4 sm:text-sm">
                 <Sparkles size={16} />
                 Desenvolvimento infantil humanizado
               </span>
-              <h1 className="max-w-3xl font-serif text-5xl font-semibold leading-[0.98] tracking-normal text-ink sm:text-6xl lg:text-7xl">
+              <h1 className="max-w-3xl font-serif text-[2.7rem] font-semibold leading-[0.98] tracking-normal text-ink min-[390px]:text-5xl sm:text-6xl lg:text-7xl">
                 Desenvolvimento com cuidado, acolhimento e propósito
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/68">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-ink/68 sm:mt-6 sm:text-lg sm:leading-8">
                 Atendimento especializado com foco no desenvolvimento infantil e acompanhamento
                 individualizado.
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-7 flex flex-col gap-3 sm:mt-8 sm:flex-row">
                 <a
                   href={whatsappUrl}
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-moss px-6 font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-ink"
@@ -207,21 +207,21 @@ export default function Home() {
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.1 }}
               className="relative"
             >
-              <div className="soft-shape absolute -left-8 top-8 h-40 w-40 bg-mist/80" />
-              <div className="relative overflow-hidden rounded-[2rem] bg-linen shadow-soft">
+              <div className="soft-shape absolute -left-5 top-8 h-28 w-28 bg-mist/80 sm:-left-8 sm:h-40 sm:w-40" />
+              <div className="relative overflow-hidden rounded-[1.5rem] bg-linen shadow-soft sm:rounded-[2rem]">
                 <Image
                   priority
                   src="https://images.unsplash.com/photo-1604881991720-f91add269bed?auto=format&fit=crop&w=1100&q=85"
                   alt="Criança em ambiente terapêutico acolhedor"
                   width={900}
                   height={1040}
-                  className="h-[560px] w-full object-cover"
+                  className="h-[390px] w-full object-cover sm:h-[560px]"
                 />
-                <div className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/82 p-5 shadow-lift backdrop-blur-xl">
-                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-skysoft">
+                <div className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white/86 p-4 shadow-lift backdrop-blur-xl sm:bottom-5 sm:left-5 sm:right-5 sm:p-5">
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-skysoft sm:text-sm">
                     Cuidado próximo
                   </p>
-                  <p className="mt-1 text-lg font-semibold text-ink">
+                  <p className="mt-1 text-base font-semibold leading-6 text-ink sm:text-lg">
                     Um espaço preparado para a criança se sentir segura.
                   </p>
                 </div>
@@ -230,15 +230,15 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="sobre" className="py-16 lg:py-24">
+        <section id="sobre" className="py-14 sm:py-16 lg:py-24">
           <div className="section-shell grid gap-10 lg:grid-cols-[0.9fr_1fr] lg:items-center">
-            <div className="overflow-hidden rounded-[2rem] shadow-soft">
+            <div className="overflow-hidden rounded-[1.5rem] shadow-soft sm:rounded-[2rem]">
               <Image
                 src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=1000&q=82"
                 alt="Profissional acolhendo uma criança em atividade"
                 width={920}
                 height={760}
-                className="h-[420px] w-full object-cover"
+                className="h-[300px] w-full object-cover sm:h-[420px]"
               />
             </div>
             <motion.div
@@ -249,10 +249,10 @@ export default function Home() {
               variants={fadeUp}
             >
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-moss">Sobre</span>
-              <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+              <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-ink sm:text-5xl">
                 Cada criança possui seu próprio tempo e potencial
               </h2>
-              <p className="mt-5 text-lg leading-8 text-ink/68">
+              <p className="mt-5 text-base leading-7 text-ink/68 sm:text-lg sm:leading-8">
                 A Clínica Abirachid une atendimento humanizado, ciência e presença para apoiar o
                 desenvolvimento, a autonomia e o acompanhamento próximo da família.
               </p>
@@ -272,18 +272,18 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="especialidades" className="bg-white/45 py-16 lg:py-24">
+        <section id="especialidades" className="bg-white/45 py-14 sm:py-16 lg:py-24">
           <div className="section-shell">
             <div className="max-w-2xl">
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-moss">
                 Especialidades
               </span>
-              <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+              <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-ink sm:text-5xl">
                 Cuidado técnico com leveza e intenção.
               </h2>
             </div>
 
-            <div className="mt-10 grid gap-4 lg:grid-cols-4">
+            <div className="mt-8 grid gap-3 sm:mt-10 lg:grid-cols-4">
               {specialties.map((item, index) => {
                 const Icon = item.icon;
                 const isOpen = openSpecialty === index;
@@ -293,7 +293,7 @@ export default function Home() {
                     key={item.title}
                     type="button"
                     onClick={() => setOpenSpecialty(isOpen ? -1 : index)}
-                    className="rounded-3xl border border-sage/20 bg-porcelain/85 p-5 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lift"
+                    className="rounded-2xl border border-sage/20 bg-porcelain/85 p-4 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lift sm:rounded-3xl sm:p-5"
                   >
                     <div className="flex items-start justify-between gap-4">
                       <span className="grid h-12 w-12 place-items-center rounded-2xl bg-mist text-moss">
@@ -304,7 +304,7 @@ export default function Home() {
                         className={`mt-2 text-moss transition ${isOpen ? "rotate-180" : ""}`}
                       />
                     </div>
-                    <h3 className="mt-7 text-xl font-bold text-ink">{item.title}</h3>
+                    <h3 className="mt-5 text-lg font-bold text-ink sm:mt-7 sm:text-xl">{item.title}</h3>
                     <div className="accordion-panel mt-3 grid" data-open={isOpen}>
                       <div className="overflow-hidden">
                         <p className="text-sm leading-6 text-ink/65">{item.detail}</p>
@@ -317,14 +317,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="processo" className="py-16 lg:py-24">
+        <section id="processo" className="py-14 sm:py-16 lg:py-24">
           <div className="section-shell">
             <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
               <div className="max-w-2xl">
                 <span className="text-sm font-bold uppercase tracking-[0.18em] text-moss">
                   Como funciona
                 </span>
-                <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+                <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-ink sm:text-5xl">
                   Um percurso claro, cuidadoso e acompanhado.
                 </h2>
               </div>
@@ -334,14 +334,14 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mt-12 grid gap-4 lg:grid-cols-4">
+            <div className="mt-8 grid gap-3 sm:mt-12 sm:gap-4 lg:grid-cols-4">
               {steps.map(([number, title, text]) => (
                 <article
                   key={number}
-                  className="relative rounded-3xl border border-sage/20 bg-white/62 p-6 shadow-sm"
+                  className="relative rounded-2xl border border-sage/20 bg-white/62 p-5 shadow-sm sm:rounded-3xl sm:p-6"
                 >
-                  <span className="font-serif text-5xl font-semibold text-sage/70">{number}</span>
-                  <h3 className="mt-8 text-xl font-bold text-ink">{title}</h3>
+                  <span className="font-serif text-4xl font-semibold text-sage/70 sm:text-5xl">{number}</span>
+                  <h3 className="mt-5 text-lg font-bold text-ink sm:mt-8 sm:text-xl">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-ink/62">{text}</p>
                 </article>
               ))}
@@ -349,8 +349,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-moss py-14 text-white">
-          <div className="section-shell grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <section className="bg-moss py-10 text-white sm:py-14">
+          <div className="section-shell grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
             {[
               "Atendimento Humanizado",
               "Ambiente preparado para crianças",
@@ -365,21 +365,21 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 lg:py-24">
+        <section className="py-14 sm:py-16 lg:py-24">
           <div className="section-shell">
             <div className="max-w-2xl">
               <span className="text-sm font-bold uppercase tracking-[0.18em] text-moss">
                 Depoimentos
               </span>
-              <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+              <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-ink sm:text-5xl">
                 Famílias que se sentiram vistas.
               </h2>
             </div>
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-3">
               {testimonials.map((item) => (
-                <article key={item.name} className="rounded-3xl bg-white/70 p-7 shadow-lift">
-                  <span className="font-serif text-7xl leading-none text-sage/55">“</span>
-                  <p className="-mt-4 text-base leading-7 text-ink/72">{item.quote}</p>
+                <article key={item.name} className="rounded-2xl bg-white/70 p-5 shadow-lift sm:rounded-3xl sm:p-7">
+                  <span className="font-serif text-6xl leading-none text-sage/55 sm:text-7xl">“</span>
+                  <p className="-mt-3 text-sm leading-6 text-ink/72 sm:-mt-4 sm:text-base sm:leading-7">{item.quote}</p>
                   <div className="mt-7 border-t border-sage/20 pt-5">
                     <strong className="block text-ink">{item.name}</strong>
                     <span className="text-sm text-ink/55">{item.age}</span>
@@ -390,14 +390,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white/45 py-16 lg:py-24">
+        <section className="bg-white/45 py-14 sm:py-16 lg:py-24">
           <div className="section-shell">
             <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
               <div>
                 <span className="text-sm font-bold uppercase tracking-[0.18em] text-moss">
                   Galeria
                 </span>
-                <h2 className="mt-3 font-serif text-4xl font-semibold leading-tight text-ink sm:text-5xl">
+                <h2 className="mt-3 font-serif text-3xl font-semibold leading-tight text-ink sm:text-5xl">
                   Espaços pensados para acolher.
                 </h2>
               </div>
@@ -406,7 +406,7 @@ export default function Home() {
                 construir vínculo.
               </p>
             </div>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 lg:grid-cols-4">
               {gallery.map((item) => (
                 <figure key={item.title} className="group relative overflow-hidden rounded-3xl shadow-lift">
                   <Image
@@ -414,7 +414,7 @@ export default function Home() {
                     alt={item.title}
                     width={720}
                     height={860}
-                    className="h-80 w-full object-cover transition duration-500 group-hover:scale-105"
+                    className="h-64 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-80"
                   />
                   <figcaption className="absolute inset-x-4 bottom-4 rounded-2xl bg-porcelain/82 p-4 font-bold text-ink shadow-sm backdrop-blur-xl">
                     {item.title}
@@ -425,14 +425,14 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contato" className="py-16 lg:py-24">
-          <div className="section-shell overflow-hidden rounded-[2rem] bg-ink shadow-soft">
+        <section id="contato" className="py-14 sm:py-16 lg:py-24">
+          <div className="section-shell overflow-hidden rounded-[1.5rem] bg-ink shadow-soft sm:rounded-[2rem]">
             <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-              <div className="p-8 text-white sm:p-12 lg:p-16">
+              <div className="p-6 text-white sm:p-12 lg:p-16">
                 <span className="text-sm font-bold uppercase tracking-[0.18em] text-mist">
                   Próximo passo
                 </span>
-                <h2 className="mt-4 font-serif text-4xl font-semibold leading-tight sm:text-5xl">
+                <h2 className="mt-4 font-serif text-3xl font-semibold leading-tight sm:text-5xl">
                   Vamos construir esse desenvolvimento juntos?
                 </h2>
                 <p className="mt-5 max-w-xl leading-7 text-white/70">
@@ -441,7 +441,7 @@ export default function Home() {
                 </p>
                 <a
                   href={whatsappUrl}
-                  className="mt-8 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-mist px-6 font-bold text-ink transition hover:-translate-y-0.5 hover:bg-white"
+                  className="mt-8 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-mist px-6 font-bold text-ink transition hover:-translate-y-0.5 hover:bg-white sm:w-auto"
                 >
                   <MessageCircle size={18} />
                   Agendar pelo WhatsApp
@@ -469,7 +469,7 @@ export default function Home() {
               <iframe
                 title="Mapa da Clínica Abirachid"
                 src="https://www.google.com/maps?q=Cl%C3%ADnica%20Abirachid&output=embed"
-                className="min-h-[420px] w-full border-0 bg-linen lg:min-h-full"
+                className="min-h-[320px] w-full border-0 bg-linen sm:min-h-[420px] lg:min-h-full"
                 loading="eager"
                 referrerPolicy="no-referrer-when-downgrade"
               />
@@ -478,7 +478,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="border-t border-sage/20 bg-porcelain py-8">
+      <footer className="border-t border-sage/20 bg-porcelain py-8 pb-24 sm:pb-8">
         <div className="section-shell flex flex-col justify-between gap-5 text-sm text-ink/62 lg:flex-row lg:items-center">
           <div className="flex items-center gap-3">
             <Image
@@ -486,7 +486,7 @@ export default function Home() {
               alt="Clínica Abirachid"
               width={126}
               height={37}
-              className="h-10 w-auto"
+              className="h-9 w-auto sm:h-10"
             />
             <div>
               <strong className="block text-ink">Clínica Abirachid</strong>
@@ -509,7 +509,7 @@ export default function Home() {
 
       <a
         href={whatsappUrl}
-        className="fixed bottom-5 right-5 z-50 grid h-14 w-14 place-items-center rounded-full bg-[#5d7c63] text-white shadow-soft transition hover:-translate-y-1"
+        className="fixed bottom-4 right-4 z-50 grid h-12 w-12 place-items-center rounded-full bg-[#5d7c63] text-white shadow-soft transition hover:-translate-y-1 sm:bottom-5 sm:right-5 sm:h-14 sm:w-14"
         aria-label="Agendar pelo WhatsApp"
       >
         <MessageCircle size={25} />
